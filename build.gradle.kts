@@ -53,6 +53,7 @@ subprojects {
     }
 }
 
+
 tasks.create("checkTranslations") {
     doLast {
         val hmclLangDir = file("HMCL/src/main/resources/assets/lang")
