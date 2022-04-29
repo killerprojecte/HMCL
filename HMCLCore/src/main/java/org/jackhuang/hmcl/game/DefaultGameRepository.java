@@ -190,6 +190,7 @@ public class DefaultGameRepository implements GameRepository {
             // Try official version json format
             return JsonUtils.fromNonNullJson(jsonText, Version.class);
         } catch (JsonParseException ignored) {
+            ignored.printStackTrace();
         }
 
         LOG.warning("Cannot parse version json + " + file.toString() + "\n" + jsonText);
